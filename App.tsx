@@ -2,11 +2,29 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import AppRoutes from './src/routes/AppRoutes';
 
+import { AppLoading } from 'expo';
+import { useFonts, Roboto_300Light_Italic,Roboto_500Medium,Roboto_700Bold,Roboto_400Regular} from '@expo-google-fonts/roboto';
+
 export default function App() {
-  return (
-    <>
-      <AppRoutes />
-      <StatusBar style="auto" />
-    </>
-  );
+
+  let [fontsLoaded] = useFonts({
+    Roboto_300Light_Italic,
+    Roboto_400Regular,
+    Roboto_500Medium,
+    Roboto_700Bold
+  });
+
+  if (!fontsLoaded) {
+
+    return <AppLoading />;
+
+  } else {
+
+    return (
+      <>
+        <AppRoutes />
+        <StatusBar hidden  />
+      </>
+    );
+  }
 }
