@@ -1,13 +1,16 @@
 import React from 'react';
-import { Text } from 'react-native';
 
 import { Container } from './styles';
+
+import BackgroundImage from '../../components/BackgroundImage';
+import About from '../../components/About';
 
 function Login() {
 
   return (
     <Container>
-      <Text>Login</Text>
+      <BackgroundImage />
+      <About back={true} title="Login"/>
     </Container>
   );
 };

@@ -1,14 +1,30 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { KeyboardAvoidingView } from 'react-native';
 
-import { Container } from './styles';
+import { Container, InputGroup, ActionButton, Input, Button, TextButton } from './styles';
 
-function Cadastro (){
+import BackgroundImage from '../../components/BackgroundImage';
+import About from '../../components/About';
+
+function Cadastro() {
 
   return (
-    <Container>
-      <Text>Cadastro</Text>
-    </Container>
+      <Container>
+        <KeyboardAvoidingView>
+        <BackgroundImage />
+        <About back={true} title="Cadastro" />
+        <InputGroup>
+          <Input keyboardType="name-phone-pad" placeholder="Nome de usuário" />
+          <Input keyboardType="email-address" placeholder="Email" />
+          <Input keyboardType="number-pad" placeholder="Senha" />
+        </InputGroup>
+        <ActionButton>
+          <Button>
+            <TextButton>Cadastrar</TextButton>
+          </Button>
+        </ActionButton>
+        </KeyboardAvoidingView>
+      </Container>
   );
 };
 
