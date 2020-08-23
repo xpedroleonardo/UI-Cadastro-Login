@@ -1,10 +1,12 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
-import { Container, Buttons, Button, TextButton } from './styles';
+import { Buttons } from './styles';
 
 import About from '../../components/About';
 import BackgroundImage from '../../components/BackgroundImage';
+
+import { Container, Button, TextButton } from '../../components/Styles';
 
 function Inicial() {
 

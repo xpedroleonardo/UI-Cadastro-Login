@@ -1,6 +1,8 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
-    flex: 1;
-    background: #FFF;
+export const ButtonGroup = styled.View`  
+    position: absolute;
+    left: 7.47%;
+    right: 7.47%;
+    top: 77%;
 `;
